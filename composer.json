@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "DevTest\\": "src/"
-        }
+        },
+        "files": [
+            "src/components.php"
+        ]
     },
     "require": {
         "vipnytt/sitemapparser": "^1.0"
