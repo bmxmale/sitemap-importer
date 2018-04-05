@@ -1,0 +1,14 @@
+{
+    "name": "bmxmale/sitemap-importer-devtest",
+    "description": "Sitemap importer to easily create new websites and pages",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "DevTest\\": "src/"
+        }
+    },
+    "require": {
+        "vipnytt/sitemapparser": "^1.0"
+    }
+}
