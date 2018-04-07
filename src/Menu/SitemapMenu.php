@@ -14,6 +14,14 @@ class SitemapMenu extends AbstractMenu
     const URL = '/sitemap';
 
     /**
+     * @return bool|mixed
+     */
+    public function isLoginRequired()
+    {
+        return true;
+    }
+
+    /**
      * @return bool
      */
     public function isActive()
