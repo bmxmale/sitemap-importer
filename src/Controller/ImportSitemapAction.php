@@ -3,13 +3,14 @@
 namespace DevTest\Controller;
 
 use DevTest\Core\SitemapImporter;
+use Snowdog\DevTest\Controller\Base;
 use Snowdog\DevTest\Model\UserManager;
 
 /**
  * Class ImportSitemapAction
  * @package Snowdog\DevTest\Controller
  */
-class ImportSitemapAction
+class ImportSitemapAction extends Base
 {
     /**
      * @var UserManager
@@ -39,9 +40,7 @@ class ImportSitemapAction
      */
     public function execute()
     {
-        if (!isset($_SESSION['login'])) {
-            $this->redirectPage('User not logged');
-        }
+        parent::execute();
 
         $sitemapUrl = $_POST['sitemapUrl'];
         if (!filter_var($sitemapUrl, FILTER_VALIDATE_URL)) {

@@ -2,13 +2,14 @@
 
 namespace DevTest\Controller;
 
+use Snowdog\DevTest\Controller\Base;
 use Snowdog\DevTest\Model\UserManager;
 
 /**
  * Class SitemapAction
  * @package DevTest\Controller
  */
-class SitemapAction
+class SitemapAction extends Base
 {
     /**
      * @var UserManager
@@ -34,6 +35,8 @@ class SitemapAction
 
     public function execute()
     {
+        parent::execute();
+        
         include __DIR__ . '/../view/sitemap.phtml';
     }
 }
